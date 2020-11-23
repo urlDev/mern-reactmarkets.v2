@@ -1,9 +1,11 @@
-import './Search.styles';
+import SearchSrc from '../../assets/searchIcon.svg';
+
+import { SearchIcon } from './Search.styles';
 
 const Search = () => {
   return (
     <>
-      <h1>Search</h1>
+      <SearchIcon src={SearchSrc} alt="" />
     </> //
   );
 };

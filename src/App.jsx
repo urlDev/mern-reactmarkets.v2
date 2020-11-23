@@ -2,6 +2,8 @@ import { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 
 import Nav from './components/nav/Nav';
+import FinanceBar from './components/financeBar/FinanceBar';
+import Home from './components/home/Home';
 
 import { fetchChart } from './redux/actions/chart';
 import { fetchTopStories } from './redux/actions/news';
@@ -21,6 +23,8 @@ const App = () => {
   return (
     <div className="App">
       <Nav />
+      <FinanceBar />
+      <Home />
     </div>
   );
 };

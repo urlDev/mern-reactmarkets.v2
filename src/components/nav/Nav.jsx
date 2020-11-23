@@ -1,11 +1,17 @@
 import Search from '../search/Search';
+import Logo from '../logo/Logo';
+import Time from '../time/Time';
 
-import './Nav.styles';
+import { NavContainer } from './Nav.styles';
 
 const Nav = () => {
   return (
     <>
-      <Search />
+      <NavContainer>
+        <Time />
+        <Logo />
+        <Search />
+      </NavContainer>
     </> //
   );
 };

@@ -1,17 +1,17 @@
-import { FETCH_CHART_SUCCESS, FETCH_CHART_ERROR } from '../actions/chart';
+import { FETCH_FOREX_SUCCESS, FETCH_CHART_ERROR } from '../actions/chart';
 
 const initialState = {
     loading: true,
-    chart: [],
+    forex: [],
     error: null,
 };
 
 const chartReducer = (state = initialState, action) => {
     switch (action.type) {
-        case FETCH_CHART_SUCCESS:
+        case FETCH_FOREX_SUCCESS:
             return {
                 ...state,
-                chart: action.payload,
+                forex: action.payload.slice(0, 30),
                 loading: false,
             };
         case FETCH_CHART_ERROR:
