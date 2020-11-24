@@ -4,6 +4,15 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     overflow: hidden;
+    -ms-overflow-style: none;
+    /* Internet Explorer 10+ */
+    scrollbar-width: none;
+    /* Firefox */
+}
+
+::-webkit-scrollbar {
+    display: none;
+    /* Safari and Chrome */
 }
 
 code {
@@ -23,9 +32,16 @@ code {
     --weight-highlight: 700;
     --weight-regular: 400;
     /* font sizes */
-    --size-header: 5rem;
+    --size-header: 4rem;
     --size-sub-header: 3rem;
     --size-regular: 1.4rem;
+}
+
+hr {
+    width: calc(100% - 2rem);
+    margin: 0 0 0 2rem;
+    border: none;
+    border-top: 1px solid black;
 }
 
 @keyframes slide {

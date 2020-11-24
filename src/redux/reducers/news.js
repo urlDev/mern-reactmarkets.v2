@@ -1,8 +1,15 @@
-import { FETCH_NEWS_SUCCESS, FETCH_NEWS_ERROR } from '../actions/news';
+import {
+    FETCH_NEWS_SUCCESS,
+    FETCH_NEWS_ERROR,
+    FETCH_POPULAR_SUCCESS,
+    FETCH_TECH_SUCCESS,
+} from '../actions/news';
 
 const initialState = {
     loading: true,
     news: [],
+    popular: [],
+    tech: [],
     error: null,
 };
 
@@ -13,6 +20,16 @@ const newsReducer = (state = initialState, action) => {
                 ...state,
                 loading: false,
                 news: action.payload.results,
+            };
+        case FETCH_POPULAR_SUCCESS:
+            return {
+                ...state,
+                popular: action.payload.results,
+            };
+        case FETCH_TECH_SUCCESS:
+            return {
+                ...state,
+                tech: action.payload.results,
             };
         case FETCH_NEWS_ERROR:
             return {
